@@ -24,7 +24,7 @@ function Header() {
 
   const handleSignout = () => {
     signOut(auth).catch((error) => {
-      console.error('Sign out error:', error);
+    
     });
   };
 
