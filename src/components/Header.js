@@ -33,7 +33,6 @@ function Header() {
   };
 
   const handleGptSearchClick = () => {
-    console.log('clicked')
     dispatch(ToggleGptSearchView())
   }
 

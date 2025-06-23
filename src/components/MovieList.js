@@ -3,9 +3,8 @@ import MovieCard from './MovieCard'
 
 function MovieList({title,movies}) {  
    if (!movies || movies.length === 0 || !movies[0]?.poster_path) {
-    return <div>Loading movies...</div>
+    return null;
   }
-  console.log(movies[0].poster_path)
 
   return (
     <div className='p-6'>

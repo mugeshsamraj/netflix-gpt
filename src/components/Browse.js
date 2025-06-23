@@ -8,6 +8,7 @@ import useUpcoming from '../hooks/useUpcoming';
 import useTopRated from '../hooks/useTopRated';
 import { useSelector } from 'react-redux';
 import GPTSearch from './GPTSearch';
+import useSearchMovie from '../hooks/useSearchMovie';
 
 function Browse() {
   const showGptSearchData = useSelector(store => store.gpt.showGptSearch)
@@ -15,7 +16,7 @@ function Browse() {
  usePopularMovies();
  useUpcoming();
  useTopRated();
-
+useSearchMovie();
 
 
   return (

@@ -7,7 +7,9 @@ const movieSlice = createSlice({
     popularMovies:null,
     upcomingMovies:null,
     topRatedMovies:null,
+    searchMovie:null,
     trailerVideo:null,
+    searchQuery:'',
   },
   reducers: {
     addNowPlayingMovies : (state,action)=>{
@@ -22,12 +24,18 @@ const movieSlice = createSlice({
     addTopRated:(state,action)=>{
       state.topRatedMovies = action.payload;
     },
+    addSearchMovies:(state,action)=>{
+      state.searchMovie = action.payload;
+    },
     addTrailerVideo: (state,action) => {
       state.trailerVideo = action.payload;
+    },
+     setSearchQuery: (state, action) => {
+      state.searchQuery = action.payload;  // ✅ Save query in Redux
     },
     
   }
 })
 
-export const {addNowPlayingMovies,addTrailerVideo,addPopularMovies,addUpcomingMovies,addTopRated} = movieSlice.actions;
-export default movieSlice.reducer;
+export const {addNowPlayingMovies,addTrailerVideo,addPopularMovies,addUpcomingMovies,addTopRated,addSearchMovies,setSearchQuery}= movieSlice.actions;
+export default movieSlice.reducer; 
